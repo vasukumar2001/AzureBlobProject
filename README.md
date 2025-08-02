@@ -94,6 +94,38 @@ Table Service: http://127.0.0.1:10002
 
 ## How to Run
 
+## Database Setup
+
+Before running the solution, you need to create the required tables in your SQL Server database.
+
+> **Note:**  
+> You must create these tables in your database before running the solution.  
+> Set your Azure SQL Database connection string in `TangyAzureFunc/local.settings.json` under the appropriate key (e.g., `"AzureSqlDatabase"`):
+
+### Table Scripts
+#### SalesRequests Table
+```sql
+ CREATE TABLE [dbo].[SalesRequests]
+(
+    [Id] [varchar](500) NOT NULL,
+    [Name] [nvarchar](max) NOT NULL,
+    [Email] [nvarchar](max) NOT NULL,
+    [Phone] [nvarchar](max) NOT NULL,
+    [Status] [nvarchar](max) NOT NULL,
+    CONSTRAINT [PK_SalesRequests] PRIMARY KEY CLUSTERED ([Id] ASC)
+)
+ON [PRIMARY] 
+TEXTIMAGE_ON [PRIMARY];
+```
+#### GroceryItems Table
+```sql
+    CREATE TABLE [dbo].[GroceryItems](
+        [Id] [nvarchar](450) NOT NULL,
+        [Name] [nvarchar](max) NOT NULL,
+        [CreatedDate] [datetime],
+        CONSTRAINT [PK_Item] PRIMARY KEY CLUSTERED ([Id] ASC)
+    )
+```
 ### 1. Start Azure Storage Emulator or Azurite
 - Ensure local storage is running for blob operations.
 
