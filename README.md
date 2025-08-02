@@ -31,6 +31,7 @@ Queue Service: http://127.0.0.1:10001
 Table Service: http://127.0.0.1:10002
 
 📂 Directory Structure
+
 .
 ├── azurite-data/        # Azurite data and logs
 ├── .env                 # Optional environment config
