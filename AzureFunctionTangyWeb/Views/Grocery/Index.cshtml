@@ -1,0 +1,32 @@
+@model List<AzureFunctionTangyWeb.Models.GroceryItem>
+
+@{
+    ViewData["Title"] = "Grocery List";
+}
+
+<h2>Grocery List</h2>
+<a asp-action="Create" class="btn btn-primary mb-2">Create New</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Created Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.CreatedDate.ToString("g")</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
