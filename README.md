@@ -12,20 +12,28 @@ This project uses [Azurite](https://github.com/Azure/Azurite), a local emulator 
 # Open CMD and Run Command Step By Step
 1. Install Azurite Globally
 
-  npm install -g azurite
+    ```bash
+    npm install -g azurite
+    ```
 
 3. Create Data Directory
-   
-  mkdir azurite-data
 
+   ```bash
+    mkdir azurite-data
+   ```
+   
 5. Create Data Directory
-   
-  mkdir azurite-data
 
+   ```bash
+    mkdir azurite-data
+   ```
+  
 7. Run Azurite
 
-  azurite --location ./azurite-data --debug ./azurite-data/debug.log --skipApiVersionCheck
-
+   ```bash
+    azurite --location ./azurite-data --debug ./azurite-data/debug.log --skipApiVersionCheck
+   ```
+  
 #Azurite will start on:
 
 Blob Service: http://127.0.0.1:10000
