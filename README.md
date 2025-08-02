@@ -9,7 +9,7 @@ This project uses [Azurite](https://github.com/Azure/Azurite), a local emulator 
 - [Node.js](https://nodejs.org/) (v14 or later)
 - npm (Node Package Manager) install in pc
 
-# Open CMD and Rum Command Step By Step
+# Open CMD and Run Command Step By Step
 1. Install Azurite Globally
    npm install -g azurite
 
