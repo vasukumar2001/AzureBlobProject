@@ -11,18 +11,22 @@ This project uses [Azurite](https://github.com/Azure/Azurite), a local emulator 
 
 # Open CMD and Run Command Step By Step
 1. Install Azurite Globally
-   npm install -g azurite
 
-2. Create Data Directory
-   mkdir azurite-data
+  npm install -g azurite
 
 3. Create Data Directory
+   
   mkdir azurite-data
 
-5. Run Azurite
+5. Create Data Directory
+   
+  mkdir azurite-data
+
+7. Run Azurite
+
   azurite --location ./azurite-data --debug ./azurite-data/debug.log --skipApiVersionCheck
 
-Azurite will start on:
+#Azurite will start on:
 
 Blob Service: http://127.0.0.1:10000
 
@@ -34,8 +38,11 @@ Table Service: http://127.0.0.1:10002
 
 .
 ├── azurite-data/        # Azurite data and logs
+
 ├── .env                 # Optional environment config
+
 ├── package.json         # Project metadata (if using npm)
+
 └── README.md            # You're here!
 
 note: local Connection String For Azure is "UseDevelopmentStorage=true" Replace this Connectionsting in Appsettings.
