@@ -1,0 +1,19 @@
+@model AzureFunctionTangyWeb.Models.GroceryItem
+
+@{
+    ViewData["Title"] = "Create Grocery Item";
+}
+
+<h2>Create Grocery Item</h2>
+
+<form asp-action="Create" method="post" class="mt-4">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-success">Create</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
