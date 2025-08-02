@@ -1,0 +1,32 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Container List";
+}
+
+<h2 class="my-3">Container List</h2>
+
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-primary">+ Create New Container</a>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th style="width: 200px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var container in Model)
+        {
+            <tr>
+                <td>@container</td>
+                <td>
+                    <a asp-action="Manage" asp-controller="Blob" asp-route-containername="@container" class="btn btn-sm btn-warning me-2">Mange</a>
+                    <a asp-action="Delete" asp-route-containername="@container" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
